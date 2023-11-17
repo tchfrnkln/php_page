@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forex Expo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://js.paystack.co/v2/inline.js"></script>
+</head>
+<body>
+
+    <div class="text-white bg-gradient-to-br from-black to-purple-500 min-h-screen">
+        <!-- NavBar -->
+        <main class='w-full flex justify-between md:items-center p-6 relative text-white'>
+            <div class='font-bold text-white'>C-Chu Global</div>
+            <div id="menu" class='md:hidden cursor-pointer'>
+                <i id="menu_bars" class="fa-solid fa-bars"></i>
+                <i id="menu_cancel" class="hidden fa-solid fa-xmark"></i>
+            </div>
+            <div id="menu_content" class='transition ease-in-out absolute top-14 right-0 md:relative md:top-0 md:right-0 flex flex-col md:flex-row justify-between items-center w-[50%] md:w-[65%] bg-purple-900 md:bg-inherit bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg md:drop-shadow-none pt-6 md:pt-0'>
+                <div class='w-full md:w-3/5 md:flex justify-evenly text-xs'>
+                    <p class='pb-4 text-center md:pb-0 cursor-pointer '>Who is the training for?</p>
+                    <p class='pb-4 text-center md:pb-0 cursor-pointer '>Program</p>
+                    <p class='pb-4 text-center md:pb-0 cursor-pointer '>Review</p>
+                    <p class='pb-4 text-center md:pb-0 cursor-pointer '>Author</p>
+                </div>
+                <div class='flex justify-between w-24'>
+                    <i class="fa-brands fa-facebook cursor-pointer"></i>
+                    <i class="fa-brands fa-whatsapp cursor-pointer"></i>
+                    <i class="fa-brands fa-telegram cursor-pointer"></i>
+                </div>
+                <div id="payNow" class='w-[150px] px-5 p-3 bg-gradient-to-br from-purple-900 to-green-500 text-xs rounded my-6 font-bold transform hover:-translate-y-2 transition-transform duration-300 ease-in-out cursor-pointer'>Pay Now</div>
+            </div>
+        </main>
+
+        <!-- FrontPage -->
+        <main class='px-4 md:px-12 text-white'>
+            <div class='w-full grid grid-cols-1 md:grid-cols-2 gap-2 py-2'>
+                <div class='p-2 md:p-6 rounded w-full'>
+                    <p class='text-xs'>a chance to invest in yourself and your future</p>
+                    <h1 class='text-5xl font-bold py-3 w-4/5'>Forex Trading Expo</h1>
+                    <p class='text-xs w-full md:w-4/5'>1 Month Trade Signal, Cheatsheet to help you turn $10 to $500 in 90 days with proper risk management, 3 Ebooks that will change your life and help you become a winning trader, 3 Months Mentorship plus a $5,000 Live account for the best student</p>
+                    <button class='px-10 p-4 font-bold text-xs rounded-full bg-green-400 text-black my-6'>Register</button>
+                </div>
+                <!-- url("https://i0.wp.com/silasumekwe.com/wp-content/uploads/2022/01/photo_2022-01-16-00.14.06.jpeg?w=1280&ssl=1"); -->
+                <div class='p-6 rounded relative bg-contain bg-center w-full h-[300px] bg-no-repeat' style='background-image: url("https://i0.wp.com/silasumekwe.com/wp-content/uploads/2022/01/photo_2022-01-16-00.14.06.jpeg?w=1280&ssl=1");'>
+                    <div class="absolute h-max -left-3 top-48 w-[200px] lg:w-max p-1 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg text-xs">
+                        <p class='font-bold'>Silas Umekwe</p>
+                        <p>Founder & CEO of over seven privately held companies</p>
+                    </div>
+                    <div class="absolute h-max top-10 md:top-24 -right-2 md:-right-8 w-[160px] lg:w-max p-1 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg text-xs">
+                        <p class='font-bold'>14 Years</p>
+                        <p>of experience in Investing and Forex Trading</p>
+                    </div>
+                    <div class="absolute h-max -bottom-2 md:-bottom-6 left-32 w-[160px] lg:w-max p-1 bg-white bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg text-xs">
+                        <p class='font-bold'>Author</p>
+                        <p>Crypto Investors Play Book</p>
+                    </div>
+                </div>
+            </div>
+            <div class='w-full rounded-lg mt-10 p-6 bg-black flex flex-col md:flex-row justify-evenly'>
+                <div class='flex flex-col pb-6 text-xs w-full md:w-1/5'>
+                    <p class='font-bold'>Aspiring Investors</p>
+                    <p>Are you an individual who is looking for investment opportunities, forex trading is a way to diversify your investment portfolio?</p>
+                </div>
+                <div class='flex flex-col pb-6 text-xs w-full md:w-1/5'>
+                    <p class='font-bold'>Financial Enthusiast</p>
+                    <p>Are you someone who has a genuine interest in financial markets and enjoys learning about economic indicators, currency movements, and global financial trends?</p>
+                </div>
+                <div class='flex flex-col pb-6 text-xs w-full md:w-1/5'>
+                    <p class='font-bold'>Entrepreneur and Business Professional</p>
+                    <p>Are you an entrepreneur or business professional who is seeking ways to maximize their financial resources? These is a means to leverage your financial skills and potentially generate additional income beyond all other primary business ventures.</p>
+                </div>
+                <div class='flex flex-col pb-6 text-xs w-full md:w-1/5'>
+                    <p class='font-bold'>Side-Hustle Seekers</p>
+                    <p>Are you actively seeking ways to supplement your current earnings, exploring forex trading as a side hustle? This is the potential for additional financial gains and flexibility</p>
+                </div>
+            </div>
+            <div class='py-12'>
+                <div class='flex justify-between items-center px-6 md:px-12 md:flex-row flex-col'>
+                    <h1 class='text-4xl font-bold'>Expect Value even as Huge as</h1>
+                    <button class='hidden px-10 p-4 font-bold text-xs rounded-full bg-green-400 text-black my-6'>Sign up for training</button>
+                </div>
+                <div class='grid grid-cols-1 md:grid-cols-4 gap-2 p-4 md:p-12'>
+                    <div class='flex flex-col text-xs p-6'>
+                        <p class='font-bold py-2'>Forex Foundation</p>
+                        <p>What is forex? History of FOrex, Why you should start trading forex, Forex Participants, Forex Influnecers, Currency Pairs, Brokers, Trading Session</p>
+                    </div>
+                    <div class='flex flex-col text-xs p-6'>
+                        <p class='font-bold py-2'>Forex Mastery</p>
+                        <p>Charting tools, Candlestick Patterns, Chart Patterns, Technical Anaylsis, Support and Resistance, Trend and Trendlines, Indicators, Fundamental Analysis</p>
+                    </div>
+                    <div class='flex flex-col text-xs p-6'>
+                        <p class='font-bold py-2'>Trading Strategy</p>
+                        <p>How to use MT4, How to create an account, Choosing the right Brokers, Entry Strategy, Price Action Strategy, Trading Success Tips, Risk Management</p>
+                    </div>
+                    <div class='flex flex-col text-xs p-6'>
+                        <p class='font-bold py-2'>Extra BONUSES</p>
+                        <p>1 Month Trade Signal, Cheatsheet to help you turn $10 to $500 in 90 days with proper risk management, 3 Ebooks that will change your life and help you become a winning trader, 3 Months Mentorship, $5,000 Live account for the best student</p>
+                    </div>
+                </div>
+                <div class="w-full flex justify-center items-center">
+                    <button class='px-10 p-4 font-bold text-xs rounded-full bg-green-400 text-black my-6'>Sign up for training</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Timer -->
+        <div class="container pb-6">
+            <div id="countdown">
+              <ul class="text-white font-bold">
+                <li><span id="days"></span>days</li>
+                <li><span id="hours"></span>Hours</li>
+                <li><span id="minutes"></span>Minutes</li>
+                <li><span id="seconds"></span>Seconds</li>
+              </ul>
+            </div>
+            <div id="content" class="emoji">
+              <span>🥳</span>
+              <span>🎉</span>
+              <span>🎂</span>
+            </div>
+        </div>
+
+        <!-- Program -->
+        <main class='w-screen h-max bg-white p-4 md:p-12 text-black overflow-hidden'>
+            <h1 class='text-3xl font-bold'>Training Program</h1>
+            <p class='text-xs'>4 Sessions under the control of the expert and his team</p>
+            <div class='flex flex-col md:flex-row justify-center items-center'>
+                <div class='py-6 px-2 w-full md:w-2/3'>
+                Facing the formidable challenges of 2023, a year marked by economic turbulence, we find ourselves standing at the crossroads of uncertainty. In the midst of adversity, C-CHU Global has committed itself to be a beacon of opportunity for 500 Nigerians who yearn for a brighter 2024. Recognizing the struggles many have endured, we are launching an initiative to empower individuals with the knowledge and skills to navigate the Forex market—a powerful gateway to financial independence.
+                            <br></br><br></br>
+                In our unwavering commitment to uplift our community, C-CHU Global is offering an exclusive opportunity for 500 eager individuals to delve into the world of Forex trading at a remarkably discounted rate of $25. This is not just a course; it is a transformative journey towards financial empowerment.
+                            <br></br><br></br>
+                <b>Why Forex Trading? </b>
+                The Forex market presents a unique avenue for individuals to take control of their financial destinies. As traditional economic structures face unprecedented challenges, Forex trading emerges as a resilient and adaptable pathway to prosperity. By mastering the art of currency trading, participants gain the ability to harness global economic shifts to their advantage.
+                            <br></br><br></br>
+                Online Learning for Convenience and Accessibility:
+                Recognizing the demands of contemporary life, our Forex trading class will be conducted entirely online. This ensures that participants can seamlessly integrate learning into their daily routines, irrespective of location or time constraints. We believe that education should be accessible to all, and online learning provides the flexibility needed to accommodate diverse schedules.
+                            <br></br><br></br>
+                <b>C-CHU Global Commitment: </b>
+                Our commitment to the success of our participants goes beyond providing a course. We aim to foster a community of informed and empowered individuals. Throughout the course, participants will not only learn the intricacies of Forex trading but will also have access to mentorship, market insights, and a supportive network of fellow traders.
+                            <br></br><br></br>
+                <b>How to Benefit: </b>
+                Securing a spot in this exclusive program is simple. Visit our website, register, and unlock the door to a transformative learning experience. With the discounted rate of $25, we have removed financial barriers to ensure that as many individuals as possible can embark on this journey towards financial freedom.
+                            <br></br><br></br>
+                <b>Embrace the Opportunity: </b>
+                As 2023 draws its curtain, seize the chance to invest in yourself and your future. Together, lets defy the economic challenges of today and pave the way for a prosperous 2024. Join C-CHU Global on this empowering journey, and lets navigate the Forex markets together.
+                            <br></br><br></br>
+                Limited Spaces Available - Reserve Yours Now!
+                            <br></br><br></br>
+                Note: Terms and conditions apply. C-CHU Global reserves the right to close registration once the allocated spaces are filled.
+                </div>
+                <div class='w-full md:w-1/3 flex justify-center items-center'>
+                    <div class='w-full flex flex-wrap justify-center p-2 md:p-6 gap-4'>
+                        <img src="/ForexExpo.jpg" alt='Forex Expo' style="width: 300px; height: 350px; border-radius: 20px;"/>
+                        <div class='text-xs border-4 rounded-lg border-purple-300 w-full md:w-64 p-4 md:p-6'>
+                            <p class='font-bold py-2 md:py-6 text-lg'>Forex Foundation</p>
+                            <p>What is forex? History of Forex, Why you should start trading forex, Forex Participants, Forex Influnecers, Currency Pairs, Brokers, Trading Session</p>
+                        </div>
+                        <div class='text-xs border-4 rounded-lg border-purple-300 w-full md:w-64 p-4 md:p-6'>
+                            <p class='font-bold py-2 md:py-6 text-lg'>Forex Mastery</p>
+                            <p>Charting tools, Candlestick Patterns, Chart Patterns, Technical Anaylsis, Support and Resistance, Trend and Trendlines, Indicators, Fundamental Analysis</p>
+                        </div>
+                        <div class='text-xs border-4 rounded-lg border-purple-300 w-full md:w-64 p-4 md:p-6'>
+                            <p class='font-bold py-2 md:py-6 text-lg'>Trading Strategy</p>
+                            <p>How to use MT4, How to create an account, Choosing the right Brokers, Entry Strategy, Price Action Strategy, Trading Success Tips, Risk Management</p>
+                        </div>
+                        <div class='text-xs border-4 rounded-lg border-purple-300 w-full md:w-64 p-4 md:p-6'>
+                            <p class='font-bold py-2 md:py-6 text-lg'>BONUS</p>
+                            <p>1 Month Trade Signal, Cheatsheet to help you turn $10 to $500 in 90 days with proper risk management, 3 Ebooks that will change your life and help you become a winning trader, 3 Months Mentorship, $5,000 Live account for the best student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='flex justify-center'>
+                <button class='px-10 p-4 font-bold text-xs rounded-full bg-green-400 text-black my-6'>Reserve a Spot</button>
+            </div>
+        </main>
+
+        <!-- Author -->
+        <main class='p-6 flex flex-col justify-center items-center bg-gradient-to-br from-white to-purple-500 text-black'>
+            <div class='grid grid-cols-1 md:grid-cols-3 gap-4'>
+                <div class='p-6'>
+                    <p class='text-2xl font-bold'>Silas Umekwe</p>
+                    <p class='text-xs'>Silas Umekwe is an active serial entrepreneur and a certified business expert. He is the Founder & CEO of over seven privately held companies including C-Chu Global, CryptoStorez, Leeway Educational Foundation, Turtle Doven Token & C-Chu Media.</p>
+                </div>
+                <div class='p-6 rounded relative bg-cover bg-center h-[300px]' style="background-image: url('https://leewayedu.com/wp-content/uploads/2018/01/CEO.png');"></div>
+                <div class='p-6'>
+                    <div class="pb-4 flex flex-row">
+                        <i class="fa-solid fa-check px-4"></i>
+                        <p class='text-xs'>Entrepreneurial Visionary and Crypto Pioneer</p>
+                    </div>
+                    <div class="pb-4 flex flex-row">
+                        <i class="fa-solid fa-check px-4"></i>
+                        <p class='text-xs'>Financial Mentor</p>
+                    </div>
+                    <div class="pb-4 flex flex-row">
+                        <i class="fa-solid fa-check px-4"></i>
+                        <p class='text-xs'>Media Mogul and Global Event Organizer</p>
+                    </div>
+                    <div class="pb-4 flex flex-row">
+                        <i class="fa-solid fa-check px-4"></i>
+                        <p class='text-xs'>Educational Trailblazer and Business Educator</p>
+                    </div>
+                    <div class="pb-4 flex flex-row">
+                        <i class="fa-solid fa-check px-4"></i>
+                        <p class='text-xs'>Multifaceted Professional and Relationship Advocate</p>
+                    </div>
+                </div>
+            </div>
+            <button class='hidden px-10 p-4 font-bold text-xs rounded-full bg-green-400 text-black my-6'>Register</button>
+        </main>
+
+        <!-- Form -->
+        <div id="form" class="hidden min-h-screen flex items-center bg-purple-900 bg-opacity-20 backdrop-blur-lg rounded drop-shadow-lg fixed inset-0">
+            <div class="w-full">
+                <h2 class="text-center text-white font-bold text-2xl uppercase mb-10">Fill out the  form</h2>
+                <div class="bg-white p-10 rounded-lg shadow md:w-3/4 mx-auto lg:w-1/2 relative">
+                    <i id="close" class="absolute top-3 right-1 fa-lg md:fa-xl fa-solid fa-circle-xmark text-red-600 cursor-pointer"></i>
+                    <form method="post" action="process.php" id="paymentForm">
+                    <div class="mb-5">
+                        <label for="name" class="block mb-2 font-bold text-gray-600">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your fullname" class="border border-gray-300 shadow p-3 w-full rounded text-black" required value="tochi">
+                    </div>
+
+                    <div class="mb-5">
+                        <label for="name" class="block mb-2 font-bold text-gray-600">Email</label>
+                        <input type="email" id="email-address" name="email" placeholder="Email Address" class="border border-gray-300 shadow p-3 w-full rounded text-black" required value="tochi@gmail.com">
+                    </div>
+            
+                    <div class="mb-5">
+                        <label for="phone" class="block mb-2 font-bold text-gray-600">Phone</label>
+                        <input type="number" id="phone" name="phone" placeholder="Phone Number" class="border border-red-300 shadow p-3 w-full rounded text-black" required value="123456789">
+                        <p class="text-sm text-red-400 mt-2">Phone Number is required</p>
+                    </div>
+            
+                    <button class="block w-full bg-blue-500 text-white font-bold p-4 rounded-lg">Submit</button>
+                    </form>
+              </div>
+            </div>
+        </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
